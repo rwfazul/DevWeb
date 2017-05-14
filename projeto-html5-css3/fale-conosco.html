@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Tudo sobre Google Glass</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/form.css"/>
+    <script language="javascript" src="_javascript/funcoes.js"></script>
+    <script>
+        function calc_total() {
+            var qtd = parseInt(document.getElementById('cQtd').value);
+            tot = qtd * 1500;
+            document.getElementById('cTot').value = tot;
+        }
+    </script>
+</head>
+
+<body>
+<div id="interface">
+
+<header id="cabecalho">
+    <hgroup>
+        <h1>Google Glass</h1>   
+        <h2>A revolução do Google está chegando</h2>
+    </hgroup>
+    <img id="icone" src="_imagens/contato.png"/>
+
+    <!-- barra de menus -->
+    <nav id="menu"> 
+        <h1>Menu Principal</h1>
+        <ul>
+            <li onmouseover="mudaFoto('home')" onmouseout="mudaFoto('contato')">
+                <a href="index.html">Home</a></li>
+            <li onmouseover="mudaFoto('especificacoes')" onmouseout="mudaFoto('contato')">
+                <a href="specs.html">Especificações</a></li>
+            <li onmouseover="mudaFoto('fotos')" onmouseout="mudaFoto('contato')">
+                <a href="fotos.html">Fotos</a></li>
+            <li onmouseover="mudaFoto('multimidia')" onmouseout="mudaFoto('contato')">
+                <a href="multimidia.html">Multimídia</a></li>
+            <li><a href="fale-conosco.html">Fale conosco</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="corpo-full">
+    <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+        <hgroup>
+            <h3>Glass > Fotos</h3>
+            <h1>Galeria de Imagens do Google Glass</h1>
+            <h2>por Rhau Fazul</h2>
+            <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+        </hgroup>
+        </header>   
+
+        <form method="post" id="fContato" action="mailto:<email>" oninput="calc_total();"> 
+        <!--method: a) get: + veloz, - seguro (pega todos dados do form e coloca na url (tipo pesquisa google)) b) post: + lento, + seguro, envia dados por pacotes dentro da solicitacao (nao eh tao seguro, nao tem requisitos importante, como criptografia (existem outros protocolos mais poderosos)) 
+            mailto: tem que ter cliente de email instalado na maquina (outlook, mail, etc...)
+                solucao: outra linguagem, ex php (salva banco dados, etc)-->
+            <fieldset id="usuario">
+                <legend>Identificação do Usuário</legend>
+                <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="30" maxlength="40" placeholder="Nome Completo"/></p> <!-- tNome = textoNome cNome = campoNome  (evitar usar mesmo valor --> <!-- size: qtds caracteres vao aparecer simultaneamente-->
+                <p><label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" size="30" maxlength="40"/></p> <!-- type email: navegadir valida se ta no formato certo (arroba e ponto) -->
+                <p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="16" maxlength="16" placeholder="16 dígitos"/></p>
+                <fieldset id="sexo">
+                    <legend>Sexo</legend>
+                    <input type="radio" name="tSexo" id="cMasc" checked><label for="cMasc">Masculino</label></input><br/><!-- mesmo name nas 2 so permite selecionar uma por vez --> <!-- label pra qdo clicar no nome (Masc ou Fem) ja seleciona a bolinha. bom pra disp. movel (funcionalidaed pratica).. Label tb eh usado (ex: nome) pra dar semantica (identificar objetivo relativo a ele)-->
+                    <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label></input>
+                </fieldset>    
+                <p><label for="cNasc">Data de Nascimento:</label> <input type="date" name="tNasc" id="cNasc"/></p>
+            </fieldset>
+            <fieldset id="endereco">
+                <legend>Endereço do Usuário</legend>
+                <p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="20" maxlength="80" placeholder="Rua, Av, Trav, ..."/></p>
+                <p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="0" max="99999" placeholder="0-99999" /></p>
+                <p><label for="cEst">Estado:</label> 
+                    <select name="tEst" id="cEst">
+                        <!-- value: o que envia pro banco quando a opcao selecionada. Default: nome completo -->
+                        <optgroup label="Região Sudeste">
+                            <option value="MG">Minas Gerais</option>
+                            <option valeu="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                        </optgroup>
+                        <optgroup label="Região Sul">
+                            <option value="PR">Paraná</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="RS" selected>Rio Grande do Sul</option>
+                        </optgroup>
+                    </select></p>
+                <p><label for="cCid">Cidade:</label> <input type="text" name="tCid" size="28" maxlength="45" id="cCid" placeholder="Sua cidade" list="cidades"/></p>
+                <datalist id="cidades">
+                    <option value="Porto Alegre"></option>
+                    <option value="Santa Maria"></option>
+                    <option value="Silveira Martins"></option>
+                </datalist>
+            </fieldset>
+            <fieldset id="mensagem">
+                <legend>Mensagem do Usuário</legend>
+                <p><label for="cUrg">Grau de Urgência:</label> &emsp;Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="1"/>Max</p> <!-- step: salto de um valor pro outro. default: 1 -->
+                <p><label for="cMsg">Mensagem:</label> <br/><textarea name="tMsg" id="cMsg" cols="45" rows="6" placeholder="Digite sua mensagem"></textarea></p>
+            </fieldset>
+            <fieldset id="pedido">
+                <legend>Quero um Google Glass</legend>
+                <p><input type="checkbox" name="tPed" id="cPed" checked/><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label> </p>
+                <p><label for="cCor">Cor:</label> <input type="color" name="tCor" id="cCor" value="#000000"/></p>
+                <p><label for="cQtd">Quantidade:</label> <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"/></p>
+                <p id="pCentro"><label for="cTot">Preço Total: R$</label> <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" size="10" readonly/></p>
+            </fieldset>
+            <!-- <input type="submit" value="Enviar"> -->
+            <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
+        </form>
+    </article>
+</section>
+
+<footer id="rodape">
+    <p>Copyright &copy; 2017 - by Rhau Fazul</p>
+    <p><a href="http://facebook.com/" target="_blank"> <img src="_imagens/facebook.png" class="img-rodape">Facebook</a> |
+    <a href="http://twitter.com/" target="_blank"> <img src="_imagens/twitter.png" class="img-rodape">Twitter</a></p>
+</footer>
+
+</div>
+</body>
+</html>
