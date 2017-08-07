@@ -398,6 +398,14 @@ footer .validator {
 	width: 75%;
 }
 
+.flag li {
+	display: inline-block;
+}
+
+.flag img {
+	width: 85%;
+	height: 85%;
+}
 
 /* REPONSIVIDADE: */
 @media screen and (max-width: 960px) {

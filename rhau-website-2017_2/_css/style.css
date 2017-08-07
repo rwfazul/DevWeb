@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+body {
+    width: 100%;
+    height: 100%;
+	font-size: 20px;
+	color: #333333;
+	font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+p {
+	line-height: 1.3;
+	text-align: justify;
+	text-indent: 50px;
+}
+
+p a {
+	text-decoration: underline;
+}
+
+h1, h2 {
+	font-weight: 800;
+}
+
+h1:hover, h2:hover {
+	color: #0085A1;
+}
+
+a {
+	color: #333333;
+}
+
+a:hover, a:focus {
+  	color: #0085A1;
+}
+
+hr.small {
+	max-width: 100px;
+	margin: 15px auto;
+	border-width: 4px;
+	border-color: #338099;
+}
+
+.btn {
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 800;
+	letter-spacing: 1px;
+	border-radius: 0;
+	padding: 15px 25px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-color: #338099;
+}
+
+.btn-lg {
+	font-size: 16px;
+	padding: 25px 35px;
+}
+
+.btn-default:hover {
+	background-color: #CCC;
+	border: 1px solid #CCC;
+	color: #338099;
+}
+
+.navbar-img {
+	width: 50%;
+}
+
+.navbar-brand {
+	transform: translateX(-50%);
+	left: 50%;
+	position: absolute;
+	font-size: 20px;
+}
+
+.about-section {
+    padding-top: 100px;
+    text-align: center;
+    background: #338099;
+}
+
+.about-section p, .about-section h1,
+.links-section p, .links-section h1  {
+	color: white;
+}
+
+.about-section h1:hover, .links-section h1:hover {
+	color:  #333333;
+}
+
+.about-section hr.small, .links-section hr.small {
+	border-color: #FFF;
+}
+
+.about-section .img-perfil {
+	width: 85%;
+	height: 85%;
+	margin: 10px auto;
+}
+
+.about-section .img-perfil:hover {
+	opacity: .5;
+}
+
+.research-section {
+    padding-top: 70px;
+    text-align: center;
+    background: #FFF;
+}
+
+.assignments-section {
+    padding-top: 70px;
+    text-align: center;
+    background: #EEE;
+}
+
+.assignments-section p > a {
+	text-decoration: none;
+	color: #338099;
+}
+
+.assignments-section p > a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+.links-section {
+    padding-top: 70px;
+    text-align: center;
+    background: #338099;
+}
+
+.links-section .link-block {
+	border-radius: 15px;
+	background-color: white;
+	margin: 20px auto;
+}
+
+.links-section img {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+}
+
+.links-section a.btn {
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.links-section a.btn:hover {
+	background-color: #338099;
+	color: #FFF;
+}
+
+.links-section img:hover {
+	opacity: .5;
+}
+
+.links-section p,
+.contact-section p {
+	text-align: center;
+	text-indent: 0px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.contact-section {
+    padding-top: 30px;
+    text-align: center;
+    background: #EEE;
+}
+
+.contact-section a {
+	line-height: 50px;
+	font-style: italic;
+}
+
+.contact-section hr.separator {
+	max-width: 300px;
+	border-width: 2px;
+	margin-top: -5px;
+	border-color: #CCC;
+}
+
+.contact-section a {
+	display: block;
+	color: #444;
+}
+
+.contact a:hover {
+	color: #CCC;
+}
+
+footer {
+	padding: 50px 0 10px;
+    text-align: center;
+}
+
+footer .list-inline {
+	margin: 0;
+	padding: 0;
+}
+
+footer .copyright {
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+#lattes {
+	width: 90%;
+	margin-top: -2px;
+}
+
+#lattes:hover {
+	opacity: .5;
+}
+
+.flag {
+	margin-top: 20px;
+}
+
+.flag li {
+	display: inline-block;
+	float: right;
+}
+
+.flag img {
+	width: 85%;
+	height: 85%;
+}
+
+@media(max-width:767px) {
+	.img-perfil {
+		max-width: 45%;
+		max-height: 45%;
+	}
+
+	.links-section .link-block {
+		max-width: 60%;
+		max-height: 60%;
+	}
+}
+
+@media(min-width:767px) and (max-width:991px) {
+	.navbar-brand {	
+		display: none;
+	}
+
+	.links-section .link-block {
+		max-width: 75%;
+		max-height: 75%;
+	}
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+	.navbar-brand {	
+		transform: none;
+		position: relative;
+	}
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
