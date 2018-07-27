@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Novas promocoes</title>
+</head>
+<body>
+	<form action="/promocoes" method="post"> 
+		<div>
+			<label for="mensagem">Mensagem de promoção</label>
+			<input type="text" id="mensagem" name="mensagem" placeholder="Digite a mensagem" />
+		</div> 
+		<br />
+		<div>
+			<label for="livro">Escolha o livro</label>
+			<select id="livro" name="livro[id]"> 
+				<% livros.forEach(function(livro) { %>
+					<option value="<%= livro.id %>"><%= livro.titulo %></option>
+				<% }); %>
+			</select>
+		</div>
+		<br />
+		<button type="submit">Cadastrar promoção</button>
+	</form>
+</body>
+</html>
+
+<!-- e.g. sintaxe java: livro.categoria.id, 
+	sintaxe bodyparser com extended urleconded: livro[categoria][id] -->

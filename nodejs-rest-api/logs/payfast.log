@@ -1,0 +1,31 @@
+{"message":"erros de validacao encontrados","level":"info","timestamp":"2018-07-25T21:32:23.458Z"}
+{"message":"erros de validacao encontrados","level":"info","timestamp":"2018-07-25T21:32:48.033Z"}
+{"message":"processando novo pagamento","level":"info","timestamp":"2018-07-25T21:33:00.253Z"}
+{"message":"pagamento criado","level":"info","timestamp":"2018-07-25T21:33:00.565Z"}
+{"message":"consultando pagamento 93","level":"info","timestamp":"2018-07-25T21:33:39.107Z"}
+{"message":"pagamento 93: [{\"id\":93,\"forma_de_pagamento\":\"payfast\",\"valor\":10.5,\"moeda\":\"BRL\",\"status\":\"CRIADO\",\"data\":\"2018-07-25T03:00:00.000Z\",\"descricao\":\"criando um pagamento\"}]","level":"info","timestamp":"2018-07-25T21:33:39.117Z"}
+{"message":"pagamento confirmado","level":"info","timestamp":"2018-07-25T21:33:50.025Z"}
+{"message":"pagamento cancelado","level":"info","timestamp":"2018-07-25T21:33:56.161Z"}
+{"message":"pagamento confirmado","level":"info","timestamp":"2018-07-25T21:34:37.354Z"}
+{"message":"pagamento confirmado","level":"info","timestamp":"2018-07-25T21:34:42.735Z"}
+{"message":"consultando pagamento 93","level":"info","timestamp":"2018-07-25T21:35:03.451Z"}
+{"message":"pagamento 93: [{\"id\":93,\"forma_de_pagamento\":\"payfast\",\"valor\":10.5,\"moeda\":\"BRL\",\"status\":\"CONFIRMADO\",\"data\":\"2018-07-25T03:00:00.000Z\",\"descricao\":\"criando um pagamento\"}]","level":"info","timestamp":"2018-07-25T21:35:03.455Z"}
+{"message":"pagamento cancelado","level":"info","timestamp":"2018-07-25T21:35:19.306Z"}
+{"message":"consultando pagamento 93","level":"info","timestamp":"2018-07-25T21:35:25.730Z"}
+{"message":"pagamento 93: [{\"id\":93,\"forma_de_pagamento\":\"payfast\",\"valor\":10.5,\"moeda\":\"BRL\",\"status\":\"CANCELADO\",\"data\":\"2018-07-25T03:00:00.000Z\",\"descricao\":\"criando um pagamento\"}]","level":"info","timestamp":"2018-07-25T21:35:25.733Z"}
+{ message: 'consultando pagamento 93',
+  level: 'info',
+  timestamp: '2018-07-25T21:40:45.076Z',
+  [Symbol(level)]: 'info',
+  [Symbol(message)]: '{"message":"consultando pagamento 93","level":"info","timestamp":"2018-07-25T21:40:45.076Z"}' }
+{ message: 'pagamento 93: [{"id":93,"forma_de_pagamento":"payfast","valor":10.5,"moeda":"BRL","status":"CANCELADO","data":"2018-07-25T03:00:00.000Z","descricao":"criando um pagamento"}]',
+  level: 'info',
+  timestamp: '2018-07-25T21:40:45.164Z',
+  [Symbol(level)]: 'info',
+  [Symbol(message)]: '{"message":"pagamento 93: [{\\"id\\":93,\\"forma_de_pagamento\\":\\"payfast\\",\\"valor\\":10.5,\\"moeda\\":\\"BRL\\",\\"status\\":\\"CANCELADO\\",\\"data\\":\\"2018-07-25T03:00:00.000Z\\",\\"descricao\\":\\"criando um pagamento\\"}]","level":"info","timestamp":"2018-07-25T21:40:45.164Z"}' }{"message":"consultando pagamento 93","level":"info","timestamp":"2018-07-25T21:53:52.160Z"}
+{"message":"pagamento 93: [{\"id\":93,\"forma_de_pagamento\":\"payfast\",\"valor\":10.5,\"moeda\":\"BRL\",\"status\":\"CANCELADO\",\"data\":\"2018-07-25T03:00:00.000Z\",\"descricao\":\"criando um pagamento\"}]","level":"info","timestamp":"2018-07-25T21:53:52.241Z"}
+{"message":"::ffff:127.0.0.1 - - [25/Jul/2018:21:53:52 +0000] \"GET /pagamentos/pagamento/93 HTTP/1.1\" 200 159\n","level":"info","timestamp":"2018-07-25T21:53:52.249Z"}
+{"message":"::ffff:127.0.0.1 - - [25/Jul/2018:22:03:20 +0000] \"POST /upload/imagem HTTP/1.1\" 201 59\n","level":"info","timestamp":"2018-07-25T22:03:20.895Z"}
+{"message":"processando novo pagamento","level":"info","timestamp":"2018-07-25T22:26:28.098Z"}
+{"message":"pagamento criado","level":"info","timestamp":"2018-07-25T22:26:28.219Z"}
+{"message":"::ffff:127.0.0.1 - - [25/Jul/2018:22:26:28 +0000] \"POST /pagamentos/pagamento HTTP/1.1\" 201 369\n","level":"info","timestamp":"2018-07-25T22:26:28.227Z"}

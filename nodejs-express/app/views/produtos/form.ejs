@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Novo produto</title>
+	<style>
+		.errors {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<% if ( locals.validationErrors ) { %>
+		<div class="errors">
+			<ul>
+				<% validationErrors.forEach(function(error) { %>
+					<li><%= error.param %> - <%= error.msg %></li>
+				<% }) %>
+			</ul>
+		</div>
+	<% } %>
+	<form action="/produtos" method="post" id="form">
+		<div>
+			<label for="titulo">Título</label>
+			<input type="text" id="titulo" name="titulo" placeholder="Título do livro" />
+		</div>
+		<div>
+			<label for="preco">Preço</label>
+			<input type="number" id="preco" name="preco" placeholder="Preço do livro" step="0.01" />
+		</div>
+		<div>
+			<label for="descricao">Descrição</label>
+			<textarea id="descricao" name="descricao" placeholder="Descricao do livro" rows="4"></textarea>
+		</div>
+		<br />
+		<button type="submit" id="button">Salvar</button>
+	</form>
+</body>
+</html>
+
+<script>
+	function setProduto(produto) {
+		document.getElementById('titulo').value = produto.titulo;
+		document.getElementById('preco').value = produto.preco;
+		document.getElementById('descricao').value = produto.descricao;
+	}
+</script>
+
+<% if (locals.produto) { %>
+	<script>
+		// change page title
+		document.title = 'Editar produto';
+		// retrieve the product that will be updated
+		var produto = <%- JSON.stringify(produto) %>;
+		// create a hidden input with the product id
+		var input = document.createElement("input");
+		input.type = "hidden";
+		input.name = "id";
+		input.value = "<%= produto.id %>";
+		// set form action and append new input
+		var form = document.getElementById('form');
+		form.action = "/produtos?_method=PUT";
+		form.appendChild(input); 
+		// set input values
+		setProduto(produto);
+		// updt button text
+		document.getElementById('button').innerHTML = "Atualizar";
+	</script>
+<% } %>
+
+<% if (locals.validationErrors) { %>
+	<script>
+		// retrieve the product that has errors
+		var produto = <%- JSON.stringify(invalidProduto) %>;
+		// set input values
+		setProduto(produto);
+	</script>
+<% } %>
+
