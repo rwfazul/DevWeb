@@ -66,8 +66,6 @@ CREATE TABLE IF NOT EXISTS tutor (
 	senha			VARCHAR(255) NOT NULL, 
 	PRIMARY KEY 		(id) 
 ); -->
-```
-
 
 ### change database credentials
 
@@ -110,5 +108,5 @@ find all
 remove
 
 ```bash
- remove: $ curl -X DELETE http://localhost:3000/petianos/1/ -v | json_pp
+  $ curl -X DELETE http://localhost:3000/petianos/1/ -v | json_pp
 ```
