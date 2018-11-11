@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>
+      <% if (message.length > 0) { %>
+        <p><%= message %></p>
+      <% } else { %>
+        <p>Login page</p>
+      <% } %>
+    </h1>
+    <form method="POST" action="/auth/login">
+    	<input type="text" name="username" placeholder="username">
+    	<input type="password" name="password" placeholder="password">
+    	<button type="submit">Login</button>
+    </form>
+
+    <%# if you persisted some old valid token in local storage, this is time
+    to get it with a script and put in cookies again %>
+  </body>
+</html>
